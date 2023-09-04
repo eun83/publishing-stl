@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+/* font */
+/* Pretendard - 100, 200, 300, 400, 500, 600, 700, 800, 900 */
+/* Noto Sans CJK KR - 300, 400, 500, 700 */
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 100;
+    src: url(../font/Pretendard-Thin.woff) format('woff'),
+        url(../font/Pretendard-Thin.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 200;
+    src: url(../font/Pretendard-ExtraLight.woff) format('woff'),
+        url(../font/Pretendard-ExtraLight.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../font/Pretendard-Light.woff) format('woff'),
+        url(../font/Pretendard-Light.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/Pretendard-Regular.woff) format('woff'),
+        url(../font/Pretendard-Regular.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../font/Pretendard-Medium.woff) format('woff'),
+        url(../font/Pretendard-Medium.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 600;
+    src: url(../font/Pretendard-SemiBold.woff) format('woff'),
+        url(../font/Pretendard-SemiBold.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/Pretendard-Bold.woff) format('woff'),
+        url(../font/Pretendard-Bold.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 800;
+    src: url(../font/Pretendard-ExtraBold.woff) format('woff'),
+        url(../font/Pretendard-ExtraBold.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 900;
+    src: url(../font/Pretendard-Black.woff) format('woff'),
+        url(../font/Pretendard-Black.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../font/NotoSansCJKKR-Light.woff) format('woff'),
+        url(../font/NotoSansCJKKR-Light.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/NotoSansCJKKR-Regular.woff) format('woff'),
+        url(../font/NotoSansCJKKR-Regular.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../font/NotoSansCJKKR-Medium.woff) format('woff'),
+        url(../font/NotoSansCJKKR-Medium.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/NotoSansCJKKR-Bold.woff) format('woff'),
+        url(../font/NotoSansCJKKR-Bold.woff2) format('woff2')
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+::before,
+::after {
+    content: '';
+}
+
+:root {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    cursor: default;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    -moz-tab-size: 4;
+    tab-size: 4
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/* reset custermize */
+body {
+    font-family: 'Pretendard', 'Noto Sans CJK KR', 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
