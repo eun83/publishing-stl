@@ -1,110 +1,186 @@
 @charset "utf-8";
 
 /* font */
+/* NanumSquare - 200, 400, 700, 800 */
+/* NanumSquareAc - 200, 400, 700, 800 */
 /* Pretendard - 100, 200, 300, 400, 500, 600, 700, 800, 900 */
 /* Noto Sans CJK KR - 300, 400, 500, 700 */
+
 @font-face {
-    font-family: 'Pretendard';
+    font-weight: 200;
+    font-family: 'NanumSquare';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.eot?#iefix) format("embedded-opentype"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.woff) format("woff"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.ttf) format("truetype");
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: 'NanumSquare';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.eot?#iefix) format("embedded-opentype"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.woff) format("woff"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.ttf) format("truetype");
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: 'NanumSquare';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.eot?#iefix) format("embedded-opentype"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.woff) format("woff"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.ttf) format("truetype");
+}
+
+@font-face {
+    font-weight: 800;
+    font-family: 'NanumSquare';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.eot?#iefix) format("embedded-opentype"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.woff) format("woff"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.ttf) format("truetype");
+}
+
+@font-face {
+    font-weight: 200;
+    font-family: 'NanumSquareAc';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acL.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acL.eot?#iefix) format("embedded-opentype"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acL.woff) format("woff"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acL.ttf) format("truetype");
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: 'NanumSquareAc';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acR.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acR.eot?#iefix) format("embedded-opentype"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acR.woff) format("woff"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acR.ttf) format("truetype");
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: 'NanumSquareAc';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acB.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acB.eot?#iefix) format("embedded-opentype"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acB.woff) format("woff"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acB.ttf) format("truetype");
+}
+
+@font-face {
+    font-weight: 800;
+    font-family: 'NanumSquareAc';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acEB.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acEB.eot?#iefix) format("embedded-opentype"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acEB.woff) format("woff"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acEB.ttf) format("truetype");
+}
+
+
+@font-face {
     font-style: normal;
     font-weight: 100;
+    font-family: 'Pretendard';
     src: url(../font/Pretendard-Thin.woff) format('woff'),
-        url(../font/Pretendard-Thin.woff2) format('woff2')
+        url(../font/Pretendard-Thin.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'Pretendard';
     font-style: normal;
     font-weight: 200;
+    font-family: 'Pretendard';
     src: url(../font/Pretendard-ExtraLight.woff) format('woff'),
-        url(../font/Pretendard-ExtraLight.woff2) format('woff2')
+        url(../font/Pretendard-ExtraLight.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'Pretendard';
     font-style: normal;
     font-weight: 300;
+    font-family: 'Pretendard';
     src: url(../font/Pretendard-Light.woff) format('woff'),
-        url(../font/Pretendard-Light.woff2) format('woff2')
+        url(../font/Pretendard-Light.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'Pretendard';
     font-style: normal;
     font-weight: 400;
+    font-family: 'Pretendard';
     src: url(../font/Pretendard-Regular.woff) format('woff'),
-        url(../font/Pretendard-Regular.woff2) format('woff2')
+        url(../font/Pretendard-Regular.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'Pretendard';
     font-style: normal;
     font-weight: 500;
+    font-family: 'Pretendard';
     src: url(../font/Pretendard-Medium.woff) format('woff'),
-        url(../font/Pretendard-Medium.woff2) format('woff2')
+        url(../font/Pretendard-Medium.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'Pretendard';
     font-style: normal;
     font-weight: 600;
+    font-family: 'Pretendard';
     src: url(../font/Pretendard-SemiBold.woff) format('woff'),
-        url(../font/Pretendard-SemiBold.woff2) format('woff2')
+        url(../font/Pretendard-SemiBold.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'Pretendard';
     font-style: normal;
     font-weight: 700;
+    font-family: 'Pretendard';
     src: url(../font/Pretendard-Bold.woff) format('woff'),
-        url(../font/Pretendard-Bold.woff2) format('woff2')
+        url(../font/Pretendard-Bold.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'Pretendard';
     font-style: normal;
     font-weight: 800;
+    font-family: 'Pretendard';
     src: url(../font/Pretendard-ExtraBold.woff) format('woff'),
-        url(../font/Pretendard-ExtraBold.woff2) format('woff2')
+        url(../font/Pretendard-ExtraBold.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'Pretendard';
     font-style: normal;
     font-weight: 900;
+    font-family: 'Pretendard';
     src: url(../font/Pretendard-Black.woff) format('woff'),
-        url(../font/Pretendard-Black.woff2) format('woff2')
+        url(../font/Pretendard-Black.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'Noto Sans CJK KR';
     font-style: normal;
     font-weight: 300;
+    font-family: 'Noto Sans CJK KR';
     src: url(../font/NotoSansCJKKR-Light.woff) format('woff'),
-        url(../font/NotoSansCJKKR-Light.woff2) format('woff2')
+        url(../font/NotoSansCJKKR-Light.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'Noto Sans CJK KR';
     font-style: normal;
     font-weight: 400;
+    font-family: 'Noto Sans CJK KR';
     src: url(../font/NotoSansCJKKR-Regular.woff) format('woff'),
-        url(../font/NotoSansCJKKR-Regular.woff2) format('woff2')
+        url(../font/NotoSansCJKKR-Regular.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'Noto Sans CJK KR';
     font-style: normal;
     font-weight: 500;
+    font-family: 'Noto Sans CJK KR';
     src: url(../font/NotoSansCJKKR-Medium.woff) format('woff'),
-        url(../font/NotoSansCJKKR-Medium.woff2) format('woff2')
+        url(../font/NotoSansCJKKR-Medium.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'Noto Sans CJK KR';
     font-style: normal;
     font-weight: 700;
+    font-family: 'Noto Sans CJK KR';
     src: url(../font/NotoSansCJKKR-Bold.woff) format('woff'),
-        url(../font/NotoSansCJKKR-Bold.woff2) format('woff2')
+        url(../font/NotoSansCJKKR-Bold.woff2) format('woff2');
 }
 
 /* reset */
@@ -122,20 +198,18 @@
     flex-shrink: 0;
 }
 
-::before,
-::after {
-    content: '';
-}
-
 :root {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    cursor: default;
     line-height: 1.5;
+    cursor: default;
+    -webkit-tap-highlight-color: transparent;
+    /* 모바일 클릭시 검은색영역 사라짐 */
+    -webkit-text-size-adjust: 100%;
+    /* 모바일에서도 원래의 폰트 크기대로 출력 */
+    text-size-adjust: 100%;
     overflow-wrap: break-word;
+    /* 루트에 걸어두면 띄어쓰기 없을때 글자 빠져나가는것 방지 */
     -moz-tab-size: 4;
-    tab-size: 4
+    tab-size: 4;
 }
 
 html,
@@ -153,20 +227,20 @@ svg {
 }
 
 button {
-    background: none;
     border: 0;
+    background: none;
     cursor: pointer;
 }
 
 a,
 a:focus,
 a:hover {
-    text-decoration: none
+    text-decoration: none;
 }
 
 table {
     border-collapse: collapse;
-    border-spacing: 0
+    border-spacing: 0;
 }
 
 ol,
@@ -176,7 +250,104 @@ ul {
 
 /* reset custermize */
 body {
-    font-family: 'Pretendard', 'Noto Sans CJK KR', 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif;
+    width: 100%;
     font-weight: 400;
+    font-family: 'Pretendard', 'Noto Sans CJK KR', 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif;
     overflow-x: hidden;
+}
+
+/* icon css */
+    /* menu */
+.icon_menu {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 4px;
+    margin-top: -2px;
+    color: currentColor;
+    transform: translateX(-50%);
+    background-color: currentColor;
+}
+
+.icon_menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 26px;
+    height: 4px;
+    background-color: currentColor;
+}
+
+.icon_menu::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 26px;
+    height: 4px;
+    background-color: currentColor;
+}
+
+    /* search */
+.icon_search {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    margin-top: 2px;
+    color: currentColor;
+    transform: translate(-50%, -50%);
+}
+
+.icon_search::before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: solid 2.5px currentColor;
+    border-radius: 100%;
+}
+
+.icon_search::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 12px;
+    margin-top: -6px;
+    margin-left: 22px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background-color: currentColor;
+}
+
+/* arrow */
+.icon_arrow {
+    display: block;
+}
+.icon_arrow::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    margin-top: 10px;
+    margin-left: 2px;
+    color: currentColor;
+    background-color: currentColor;
+}
+.icon_arrow::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    margin-top: 7px;
+    margin-left: 10px;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 }

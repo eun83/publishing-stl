@@ -8,20 +8,20 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="format-detection" content="telephone=no">	
 	<title>디지털헬스케어 소프트웨어 시험평가센터</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://stl.ktl.re.kr/cubersc/cube.ico">	
+    <link rel="shortcut icon" type="image/x-icon" href="cubersc/cube.ico">	
     <!-- script -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
-    <script src="https://stl.ktl.re.kr/cubersc/templete/web/lib/js/slick.js"></script>
-    <script src="https://stl.ktl.re.kr/cubersc/templete/web/lib/js/jquery.fullPage.js"></script>
-    <script src="https://stl.ktl.re.kr/cubersc/templete/web/lib/js/jquery-1.12.4.min.js"></script>
-    <script src="https://stl.ktl.re.kr/cubersc/templete/common/js/jquery-ui.min.js"></script>
+    <script src="cubersc/templete/web/lib/js/slick.js"></script>
+    <script src="cubersc/templete/web/lib/js/jquery.fullPage.js"></script>
+    <script src="cubersc/templete/web/lib/js/jquery-1.12.4.min.js"></script>
+    <script src="cubersc/templete/common/js/jquery-ui.min.js"></script>
     <!-- //script -->
     <!-- css -->
-    <link rel="stylesheet" type="text/css" href="https://stl.ktl.re.kr/cubersc/templete/web/css/common.css">
-    <link rel="stylesheet" type="text/css" href="https://stl.ktl.re.kr/cubersc/templete/web/css/layout.css">
-    <link rel="stylesheet" type="text/css" href="https://stl.ktl.re.kr/cubersc/templete/web/css/sub.css">
-    <link rel="stylesheet" type="text/css" href="https://stl.ktl.re.kr/cubersc/templete/web/lib/css/slick.css">
-    <link rel="stylesheet" type="text/css" href="https://stl.ktl.re.kr/cubersc/templete/web/lib/css/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/common.css">
+    <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/sub.css">
+    <link rel="stylesheet" type="text/css" href="cubersc/templete/web/lib/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="cubersc/templete/web/lib/css/jquery.fullPage.css">
     <!-- //css -->
 
     <!-- 23-09-04 메인 리뉴얼 추가 파일들 -->
@@ -31,7 +31,7 @@
 
 <body>
     <!-- wrapper -->
-    <div class="wrapper">
+    <div class="wrapper main">
         <!-- skipnavi -->
         <div id="accessibility">
             <a href="#container">본문 바로가기</a>
@@ -42,8 +42,8 @@
         <!-- header -->
         <header>
             <h1 class="logo">
-                <a href="">
-                    <img src="" alt="">
+                <a href="web/main/index.do">
+                    <img src="cubersc/templete/web/img/logo.png" alt="디지털헬스케어 소프트웨어 시험평가센터 로고">
                 </a>
             </h1>
 
@@ -147,20 +147,20 @@
             <div class="btn_wrap">
                 <a href="">로그인</a>
                 <a href="">회원가입</a>
-                <button type="button" class="">검색창 열기</button>
-                <button type="button" class="">메뉴 열기</button>
-            </div>
-            <div class="search_wrap">
-                <form name="" role="">
-                    <fieldset>
-                        <legend>검색</legend>
-                        <div class="search_box">
-                            <input type="search" class="search_input" title="검색어를 입력해 주세요." placeholder="검색어를 입력해 주세요.">
-                            <button type="submit" class="search_btn" title="검색">검색</button>
-                            <button type="button" class="close_btn" title="검색창 닫기">검색창 닫기</button>
-                        </div>
-                    </fieldset>
-                </form>
+                <button type="button" class=""><i class="icon_search"></i>검색창 열기</button>
+                <button type="button" class="bg_blue"><i class="icon_menu"></i>메뉴 열기</button>
+                <div class="search_wrap">
+                    <form name="" role="">
+                        <fieldset>
+                            <legend>검색</legend>
+                            <div class="search_box">
+                                <input type="search" class="search_input" title="검색어를 입력해 주세요." placeholder="검색어를 입력해 주세요.">
+                                <button type="submit" class="search_btn" title="검색">검색</button>
+                                <button type="button" class="close_btn" title="검색창 닫기">검색창 닫기</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </header>
 
@@ -237,7 +237,7 @@
         </section>
 
         <!-- about STL & community -->
-        <section>
+        <section class="about_comm">
             <div class="about_stl">
                 <h3>About STL</h3>
                 <ul>
@@ -281,7 +281,7 @@
         </section>
 
         <!-- partners -->
-        <section>
+        <section class="partners">
             <h3>Partners</h3>
             <div class="pts_logo">
 
@@ -291,7 +291,7 @@
         <footer>
             <h2>
                 <a href="">
-                    <img src="" alt="">
+                    <img src="cubersc/templete/web/img/ft_logo.png" alt="디지털헬스케어 소프트웨어 시험평가센터 하단로고">
                 </a>
             </h2>
             <ul>
@@ -309,7 +309,7 @@
                 </li>
                 <li>
                     <b>개인정보 보호책임자</b>
-                    <span>전창철<a href="mailto:ccclub@ktl.re.kr">&#40;ccclub@ktl.re.kr&#41;</a></span>
+                    <span>전창철 <a href="mailto:ccclub@ktl.re.kr">&#40;ccclub@ktl.re.kr&#41;</a></span>
                 </li>
             </ul>
             <p>본 웹사이트는 이메일 주소가 무단 수집되는 것을 거부하며, 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.</p>
