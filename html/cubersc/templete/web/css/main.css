@@ -6,13 +6,14 @@
     letter-spacing: 0;
 }
 .main section h3 {
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: #949494;
-    text-transform: uppercase;
     margin-bottom: 30px;
+    font-size: 1.375rem;
+    font-weight: 800;
+    font-family:"relaxia";
+    color: #949494;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
-
 /* header renewal */
 header {
     display: flex;
@@ -23,21 +24,153 @@ header h1 {
     position: static;
     margin: 0 50px;
 }
-header .gnb_wrap {
+    /* nav gnb 메뉴 */
+.nav,
+.nav > ul > li > a::after,
+.nav > ul > li > ul				{
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+.nav {
     margin: 0 auto;
     padding: 0;
 }
-header .gnb_wrap .menu {
-    display: flex;    
-    justify-content: space-between;
+.nav ul {
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
+    display: flex;
+    -webkit-justify-content: flex-start; 
+    -ms-flex-pack: start; 
+    justify-content: flex-start;
 }
-header .menu li > a {
+.nav > ul {
+    display: flex;
+    height: 110px;    
+    justify-content: flex-start;
+}
+.nav > ul::before {
+    content: '';
     display: block;
-    padding: 1rem 3rem;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+    background-color: white;
+}
+.nav > ul:hover::before,
+.nav > ul:focus::before { 
+    visibility:visible;
+    height: 90px; 
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1); 
+    opacity: 1;
+}
+.nav > ul > li > a {
+    display: block;
+    position: relative;
+    height: 110px;
+    padding: 0 40px;
+    font-size: 1.25rem;
     font-weight: 700;
-    font-size: 1.125rem;
     font-family: 'NanumSquare';
+    line-height: 110px;
 } 
+.nav > ul > li > a:hover,
+.nav > ul > li:hover > a,
+.nav > ul > li > a:focus,
+.nav > ul > li.current > a {
+    color: #0061ce;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav > ul > li > a:hover::after,
+.nav > ul > li:hover > a::after,
+.nav > ul > li > a:focus::after,
+.nav > ul > li.current > a::after {
+    content:''; 
+    display: block; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 3px;
+    background-color: #0061ce;
+}
+.nav > ul > li > a:hover::after,
+.nav > ul > li > a::after {
+    content: " "; 
+    display: block; 
+    position: absolute; 
+    right: 0; 
+    bottom: 0; 
+    left: 0; 
+    height: 3px;     
+    background: #0061ce;
+    -moz-transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    transform-origin: bottom center;
+}
+.nav > ul > li:hover > a::after,
+.nav > ul > li:focus > a::after {
+    -moz-transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+.nav > ul ul { 
+    visibility: hidden;
+    position: absolute; 
+    top: 100%;
+    z-index:10 ;
+    width: -webkit-max-content;
+    width: -moz-max-content; 
+    width: max-content; 
+    padding: 34px 32px;
+    transform: translateX(-20%); 
+    opacity: 0;
+}
+.nav ul > li:hover > ul,
+.nav ul > li:focus > ul { 
+    visibility:visible;
+    opacity:1;
+    -webkit-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+}
+.nav > ul ul a {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'NanumSquareAc';
+}
+.nav > ul ul > li + li {
+    margin-left: 10px;
+}
+.nav > ul > li > ul > li> a:hover,
+.nav > ul > li > ul > li> a:focus,
+.nav > ul > li > ul > li.current > a {
+    color: #0060ce;
+    transition: all 0.2s ease-in-out;
+}
+    /* right btns */
 header .btn_wrap {
     display: flex;
     margin-left: auto;
@@ -45,8 +178,8 @@ header .btn_wrap {
 }
 header .btn_wrap > a {
     padding: 1rem 1.25rem;
-    font-weight: 400;
     font-size: .875rem;
+    font-weight: 400;
     font-family: 'NanumSquareAc';
     color: #333;
 }
@@ -66,17 +199,13 @@ header .btn_wrap > button.bg_blue {
 
 
 
-header .depth_wrap {
-    display: none;
-}
-header .search_wrap {
-    display: none;
-}
+
+
 
 /* about STL & community */
 .about_comm {
-    padding: 90px 100px;
     display: flex;
+    padding: 90px 100px;
 }
 .about_stl {
     width: calc(70% - 30px);
@@ -92,12 +221,12 @@ header .search_wrap {
 }
 .about_stl > ul li a {
     display: flex;
-    color: #fff;
+    min-height: 405px;
+    padding: 55px;
     font-size: 1.5rem;
     font-weight: 600;
-    min-height: 405px;
+    color: #fff;
     align-items: end;
-    padding: 55px;
 
 }
 .community {
@@ -108,13 +237,13 @@ header .search_wrap {
 }
 .community > ul a {
     display: flex;
-    justify-content: end;    
-    align-items: center;
     width: 100%;
     padding: 40px 55px;
     background: #f4f4f4;
     font-size: 1.375rem;
     font-weight: 600;
+    justify-content: end;    
+    align-items: center;
     
 }
 .community a span {
@@ -147,8 +276,8 @@ footer {
     margin: 0;
     padding: 90px 100px;
     background: #0d0d0d;
-    font-weight: 400;
     font-size: .875rem;
+    font-weight: 400;
     font-family: 'NanumSquareAc';
 }
 footer > ul {
@@ -182,4 +311,20 @@ footer .copy {
     margin-top: 55px;
     color: #666;
     letter-spacing: .5px;
+}
+
+
+
+
+/* ---------- respond ---------- */
+
+@media screen and (max-width: 1600px) {
+    header h1 a {
+        width: 143px;
+        height: 73px;
+        background: url(../img/logo_small.png) no-repeat;
+    }
+    header h1 a > img {
+        display: none;
+    }
 }

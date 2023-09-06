@@ -5,6 +5,18 @@
 /* NanumSquareAc - 200, 400, 700, 800 */
 /* Pretendard - 100, 200, 300, 400, 500, 600, 700, 800, 900 */
 /* Noto Sans CJK KR - 300, 400, 500, 700 */
+/* relaxia - 400 one size */
+
+@font-face {
+    font-family:"relaxia";
+    font-display:auto;
+    font-style:normal;
+    font-weight:400;
+    font-stretch:normal;
+    src:url("../font/relaxiaR.woff2") format("woff2"),
+    url("../font/relaxiaR.woff") format("woff"),
+    url("../font/relaxiaR.otf") format("opentype");    
+    }
 
 @font-face {
     font-weight: 200;
