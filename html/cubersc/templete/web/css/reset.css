@@ -8,10 +8,10 @@
 /* relaxia - 400 one size */
 
 @font-face {
-    font-family:"relaxia";
-    font-display:auto;
-    font-style:normal;
     font-weight:400;
+    font-family:"relaxia";
+    font-style:normal;
+    font-display:auto;
     font-stretch:normal;
     src:url("../font/relaxiaR.woff2") format("woff2"),
     url("../font/relaxiaR.woff") format("woff"),
@@ -92,105 +92,105 @@
 
 
 @font-face {
-    font-style: normal;
     font-weight: 100;
     font-family: 'Pretendard';
+    font-style: normal;
     src: url(../font/Pretendard-Thin.woff) format('woff'),
         url(../font/Pretendard-Thin.woff2) format('woff2');
 }
 
 @font-face {
-    font-style: normal;
     font-weight: 200;
     font-family: 'Pretendard';
+    font-style: normal;
     src: url(../font/Pretendard-ExtraLight.woff) format('woff'),
         url(../font/Pretendard-ExtraLight.woff2) format('woff2');
 }
 
 @font-face {
-    font-style: normal;
     font-weight: 300;
     font-family: 'Pretendard';
+    font-style: normal;
     src: url(../font/Pretendard-Light.woff) format('woff'),
         url(../font/Pretendard-Light.woff2) format('woff2');
 }
 
 @font-face {
-    font-style: normal;
     font-weight: 400;
     font-family: 'Pretendard';
+    font-style: normal;
     src: url(../font/Pretendard-Regular.woff) format('woff'),
         url(../font/Pretendard-Regular.woff2) format('woff2');
 }
 
 @font-face {
-    font-style: normal;
     font-weight: 500;
     font-family: 'Pretendard';
+    font-style: normal;
     src: url(../font/Pretendard-Medium.woff) format('woff'),
         url(../font/Pretendard-Medium.woff2) format('woff2');
 }
 
 @font-face {
-    font-style: normal;
     font-weight: 600;
     font-family: 'Pretendard';
+    font-style: normal;
     src: url(../font/Pretendard-SemiBold.woff) format('woff'),
         url(../font/Pretendard-SemiBold.woff2) format('woff2');
 }
 
 @font-face {
-    font-style: normal;
     font-weight: 700;
     font-family: 'Pretendard';
+    font-style: normal;
     src: url(../font/Pretendard-Bold.woff) format('woff'),
         url(../font/Pretendard-Bold.woff2) format('woff2');
 }
 
 @font-face {
-    font-style: normal;
     font-weight: 800;
     font-family: 'Pretendard';
+    font-style: normal;
     src: url(../font/Pretendard-ExtraBold.woff) format('woff'),
         url(../font/Pretendard-ExtraBold.woff2) format('woff2');
 }
 
 @font-face {
-    font-style: normal;
     font-weight: 900;
     font-family: 'Pretendard';
+    font-style: normal;
     src: url(../font/Pretendard-Black.woff) format('woff'),
         url(../font/Pretendard-Black.woff2) format('woff2');
 }
 
 @font-face {
-    font-style: normal;
     font-weight: 300;
     font-family: 'Noto Sans CJK KR';
+    font-style: normal;
     src: url(../font/NotoSansCJKKR-Light.woff) format('woff'),
         url(../font/NotoSansCJKKR-Light.woff2) format('woff2');
 }
 
 @font-face {
-    font-style: normal;
     font-weight: 400;
     font-family: 'Noto Sans CJK KR';
+    font-style: normal;
     src: url(../font/NotoSansCJKKR-Regular.woff) format('woff'),
         url(../font/NotoSansCJKKR-Regular.woff2) format('woff2');
 }
 
 @font-face {
-    font-style: normal;
     font-weight: 500;
     font-family: 'Noto Sans CJK KR';
+    font-style: normal;
     src: url(../font/NotoSansCJKKR-Medium.woff) format('woff'),
         url(../font/NotoSansCJKKR-Medium.woff2) format('woff2');
 }
 
 @font-face {
-    font-style: normal;
     font-weight: 700;
     font-family: 'Noto Sans CJK KR';
+    font-style: normal;
     src: url(../font/NotoSansCJKKR-Bold.woff) format('woff'),
         url(../font/NotoSansCJKKR-Bold.woff2) format('woff2');
 }
@@ -266,6 +266,18 @@ body {
     font-weight: 400;
     font-family: 'Pretendard', 'Noto Sans CJK KR', 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif;
     overflow-x: hidden;
+}
+.hide {
+    visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+    z-index: -1;
 }
 
 /* icon css */
@@ -362,4 +374,36 @@ body {
     border-right: solid 2px currentColor;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
+}
+
+/* close */
+.icon_close {
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 34px;
+    height: 34px;    
+    transform: translate(-50%, -25%);
+}
+.icon_close::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 34px;
+    height: 4px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    background-color: currentColor;
+}
+.icon_close::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 34px;
+    height: 4px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background-color: currentColor;
 }

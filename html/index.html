@@ -10,18 +10,24 @@
 	<title>디지털헬스케어 소프트웨어 시험평가센터</title>
     <link rel="shortcut icon" type="image/x-icon" href="cubersc/cube.ico">	
     <!-- script -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
-    <script src="cubersc/templete/web/lib/js/slick.js"></script>
-    <script src="cubersc/templete/web/lib/js/jquery.fullPage.js"></script>
-    <script src="cubersc/templete/web/lib/js/jquery-1.12.4.min.js"></script>
+    <!-- 
+    
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+        <script src="cubersc/templete/web/lib/js/jquery.fullPage.js"></script>
+     -->
     <script src="cubersc/templete/common/js/jquery-ui.min.js"></script>
+    <script src="cubersc/templete/web/lib/js/jquery-1.12.4.min.js"></script>
+    <script src="cubersc/templete/web/lib/js/slick.js"></script>
+
     <script src="cubersc/templete/web/js/common.js"></script>
     <script src="cubersc/templete/web/js/main.js"></script>
     <!-- //script -->
     <!-- css -->
-    <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/common.css">
-    <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/layout.css">
-    <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/sub.css">
+    <!--
+        <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/sub.css">
+        <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/layout.css">
+        <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/common.css">
+    -->
     <link rel="stylesheet" type="text/css" href="cubersc/templete/web/lib/css/slick.css">
     <link rel="stylesheet" type="text/css" href="cubersc/templete/web/lib/css/jquery.fullPage.css">
     <!-- //css -->
@@ -29,11 +35,12 @@
     <!-- 23-09-04 메인 리뉴얼 추가 파일들 -->
     <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/reset.css">
     <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/main.css">
+    <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/header.css">
 </head>
 
 <body>
     <!-- wrapper -->
-    <div class="wrapper main">
+    <div class="wrapper">
         <!-- skipnavi -->
         <div id="accessibility">
             <a href="#container">본문 바로가기</a>
@@ -49,8 +56,8 @@
                 </a>
             </h1>
 
-            <nav class="nav">
-                <ul>
+            <nav class="nav" id="gnb">
+                <ul class="gnb_layout">
                     <li>
                         <a href="">사업소개</a>
                         <ul>
@@ -139,131 +146,213 @@
                     </form>
                 </div>
             </div>
-        </header>
 
-        <!-- visual -->
-        <section class="">
-            <div class="left_txt">
-                <h2>Digital Helthcare</h2>
-                <P>
-                    <strong>언제 어디서나,</strong>
-                    <b>정보통신과 의료가 하나되어</b>
-                    <b>건강한 서비스를 경험할 수 있도록</b>
-                </P>
-                <p>
-                    <span>디지털 헬스케어는 '정보통신'과 '보건의료'를 결합하여 예방, 진단, 치료, 사후 관리를 할 수 있습니다.</span>
-                    <span>다양한 범위의 디지털 산업에서 건강관리 및 의료서비스를 경험해보세요.</span>
-                </p>
-            </div>
-            <div class="right_slider">
-            </div>
-        </section>
-
-        <!-- service -->
-        <section>
-            <h3>Service</h3>
-            <ul>
-                <li>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
-                    <h4>
-                        <b>장비사용신청</b>
-                        <span>
-                            EQUIPMENT<br>RESERVATION
-                        </span>
-                    </h4>
-                    <div class="hover_show">
-                        <p>장비 예약 현황</p>
-                        <p>장비 예약 신청</p>
-                        <a href="">장비신청메뉴얼 바로가기</a>
-                    </div>
-                    <i class="icon_plus"></i>
-                </li>
-            </ul>
-        </section>
-
-        <!-- our business -->
-        <section>
-            <h3>Our<br>Business</h3>
-            <div>
-                <ul class="">
+            <div class="all_menu">
+                <h2>
+                    <span class="hide">STL</span>
+                </h2>
+                <ul class="gnb_layout">
                     <li>
-                        <a href="">디지털 헬스케어</a>
+                        <a href="">사업소개</a>
+                        <ul>
+                            <li>
+                                <a href="">디지털헬스케어 소프트웨어 시험평가 센터</a>
+                            </li>
+                            <li>
+                                <a href="">컨소시엄 소개</a>
+                            </li>
+                        </ul>                        
                     </li>
                     <li>
-                        <a href="">기술지도</a>
+                        <a href="">교육/포럼/설문조사</a>
+                        <ul>
+                            <li>
+                                <a href="">교육신청</a>
+                            </li>
+                            <li>
+                                <a href="">포럼신청</a>
+                            </li>
+                            <li>
+                                <a href="">설문조사</a>
+                            </li>
+                        </ul>                        
                     </li>
                     <li>
-                        <a href="">시험평가 센터</a>
+                        <a href="">정보마당</a>
+                        <ul>
+                            <li>
+                                <a href="">공고</a>
+                            </li>
+                            <li>
+                                <a href="">FDA 경고장/리콜</a>
+                            </li>
+                            <li>
+                                <a href="">해외동향</a>
+                            </li>
+                            <li>
+                                <a href="">SW가이드라인/보고서</a>
+                            </li>
+                            <li>
+                                <a href="">기타 사업공고</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">참여마당</a>
+                        <ul>
+                            <li>
+                                <a href="">자주묻는질문</a>
+                            </li>
+                            <li>
+                                <a href="">Q&amp;A</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">장비사용신청</a>
+                        <ul>
+                            <li>
+                                <a href="">장비사용신청 가이드</a>
+                            </li>
+                            <li>
+                                <a href="">장비 신청(예약) 현황</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="">로그인</a></li>
+                            <li><a href="">회원가입</a></li>
+                            <li><a href="">사이트맵</a></li>
+                        </ul>
                     </li>
                 </ul>
-                <div class="">
-                    <div>
-                        <h4>디지털 헬스케어</h4>
-                        <p>
-                            디지털 헬스케어 시험 평가 센터는<br>
-                            정보통신&#40;ICT&#41;과 의료&#40;Health care&#41;를 연결하여<br>
-                            예방부터 사후 관리까지 토탈 건강관리를 이룰 수<br>
-                            있도록 하는 서비스 입니다.
-                        </p>
-                        <i class="icon_plus"></i>
-                    </div>
+                <div class="btn_wrap">
+                    <button type="button" class="bg_blue"><i class="icon_close"></i>메뉴 닫기</button>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <!-- about STL & community -->
-        <section class="about_comm">
-            <div class="about_stl">
-                <h3>About STL</h3>
+        <div class="main">
+            <!-- visual -->
+            <section class="">
+                <div class="left_txt">
+                    <h2>Digital Helthcare</h2>
+                    <P>
+                        <strong>언제 어디서나,</strong>
+                        <b>정보통신과 의료가 하나되어</b>
+                        <b>건강한 서비스를 경험할 수 있도록</b>
+                    </P>
+                    <p>
+                        <span>디지털 헬스케어는 '정보통신'과 '보건의료'를 결합하여 예방, 진단, 치료, 사후 관리를 할 수 있습니다.</span>
+                        <span>다양한 범위의 디지털 산업에서 건강관리 및 의료서비스를 경험해보세요.</span>
+                    </p>
+                </div>
+                <div class="right_slider">
+                </div>
+            </section>
+            <!-- service -->
+            <section>
+                <h3>Service</h3>
                 <ul>
                     <li>
-                        <a href="">주관기관</a>
-                    </li>
-                    <li>
-                        <a href="">참여기관</a>
-                    </li>
-                    <li>
-                        <a href="">구성조직</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="community">
-                <h3>Community</h3>
-                <ul>
-                    <li>
-                        <a href="">
-                            <span>공지사항</span>
-                            <figure></figure>
-                            <i class="icon_arrow"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>Q&amp;A</span>
-                            <figure></figure>
-                            <i class="icon_arrow"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>자주묻는질문</span>
-                            <figure></figure>
-                            <i class="icon_arrow"></i>
-                        </a>
+                        <figure>
+                            <img src="" alt="">
+                        </figure>
+                        <h4>
+                            <b>장비사용신청</b>
+                            <span>
+                                EQUIPMENT<br>RESERVATION
+                            </span>
+                        </h4>
+                        <div class="hover_show">
+                            <p>장비 예약 현황</p>
+                            <p>장비 예약 신청</p>
+                            <a href="">장비신청메뉴얼 바로가기</a>
+                        </div>
+                        <i class="icon_plus"></i>
                     </li>
                 </ul>
-            </div>
-        </section>
-
-        <!-- partners -->
-        <section class="partners">
-            <h3>Partners</h3>
-            <div class="pts_logo">
-
-            </div>
-        </section>
+            </section>
+            <!-- our business -->
+            <section>
+                <h3>Our<br>Business</h3>
+                <div>
+                    <ul class="">
+                        <li>
+                            <a href="">디지털 헬스케어</a>
+                        </li>
+                        <li>
+                            <a href="">기술지도</a>
+                        </li>
+                        <li>
+                            <a href="">시험평가 센터</a>
+                        </li>
+                    </ul>
+                    <div class="">
+                        <div>
+                            <h4>디지털 헬스케어</h4>
+                            <p>
+                                디지털 헬스케어 시험 평가 센터는<br>
+                                정보통신&#40;ICT&#41;과 의료&#40;Health care&#41;를 연결하여<br>
+                                예방부터 사후 관리까지 토탈 건강관리를 이룰 수<br>
+                                있도록 하는 서비스 입니다.
+                            </p>
+                            <i class="icon_plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- about STL & community -->
+            <section class="about_comm">
+                <div class="about_stl">
+                    <h3>About STL</h3>
+                    <ul>
+                        <li>
+                            <a href="">주관기관</a>
+                        </li>
+                        <li>
+                            <a href="">참여기관</a>
+                        </li>
+                        <li>
+                            <a href="">구성조직</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="community">
+                    <h3>Community</h3>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span>공지사항</span>
+                                <figure></figure>
+                                <i class="icon_arrow"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Q&amp;A</span>
+                                <figure></figure>
+                                <i class="icon_arrow"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>자주묻는질문</span>
+                                <figure></figure>
+                                <i class="icon_arrow"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- partners -->
+            <section class="partners">
+                <h3>Partners</h3>
+                <div class="pts_logo">
+                </div>
+            </section>
+        </div>
 
         <footer>
             <h2>
