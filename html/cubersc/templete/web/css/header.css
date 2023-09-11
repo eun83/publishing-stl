@@ -33,9 +33,11 @@ header {
     font-family: 'NanumSquareAc';
     color: #222;
     align-items: center;
+    z-index: 50;
 }
 header h1 {
     position: static;
+    z-index: auto;
     margin: 0 50px;
 }
     /* nav gnb 메뉴 */
@@ -177,7 +179,9 @@ header h1 {
 }
 .gnb_layout > li > ul > li > a:hover,
 .gnb_layout > li > ul > li > a:focus,
-.gnb_layout > li > ul > li.current > a {
+.gnb_layout > li > ul > li.current > a,
+header > .btn_wrap > a:hover, 
+header > .btn_wrap > a:focus {
     color: #0060ce;
     transition: all 0.2s ease-in-out;
 }
@@ -209,6 +213,82 @@ header .btn_wrap > button.bg_blue {
     background: #0060ce;
     color: #fff;
 }
+
+    /* 검색 */
+.search_wrap.active,
+.search_wrap.active::before {
+    visibility: visible;
+    opacity: 1;
+}
+.search_wrap.active {
+    height: 180px;
+}
+div.search_wrap {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    border-top: 1px solid #e1e1e1;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    background: #fff; 
+    transition: all .4s cubic-bezier(.59, .01, .43, 1);
+    justify-content: center;
+    align-items: center;
+}
+.search_wrap::before,
+.search_wrap::before {
+    content: '';
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100vh;
+    min-height: 800px;
+    background: rgba(0,0,0,.5);
+}
+.search_wrap .search_inner {
+    display: flex;
+    align-items: center;
+}
+.search_wrap .search_inner input {
+    display: block;
+    width: 650px;
+    padding: 20px 30px;
+    border: 2px solid #0061ce;
+    line-height: 1.5rem;
+}
+.search_wrap .search_inner input::placeholder {
+    font: 700 1.125rem 'NanumSquare';
+    color: #d3d3d3;
+}
+.search_wrap .search_inner input:focus {
+    outline: 0;
+    border: 2px solid #222;
+}
+.search_wrap .search_inner .search_btn {
+    padding: 24px 50px 23px;
+    background: #0060ce;
+    height: 68px;
+    font: 700 1.125rem 'NanumSquare';
+    color: #fff;
+}
+.search_wrap .search_inner .close_btn {
+    position: relative;
+    padding: 22px 50px;
+    color: #d4d4d4;
+    text-indent: -9999px;
+}
+.search_wrap .search_inner .close_btn .icon_close {
+    left: auto;
+    margin-top: 4px;
+}
+
     /* 전체 메뉴 */
 .all_menu {
     /* display: none; */
@@ -218,6 +298,7 @@ header .btn_wrap > button.bg_blue {
     z-index: 100;
     width: 100%;
     height: 100vh;
+    min-height: 800px;
     background: #f4f4f4 url(../img/all_menu_bg.png) repeat-x bottom 80px right;
 }
 .all_menu .btn_wrap {
@@ -225,14 +306,18 @@ header .btn_wrap > button.bg_blue {
     top: 0;
     right: 0;
 }
-.all_menu h2 {
+.all_menu h1 a,
+.all_menu .btn_wrap .btn-search {
+    display: none;
+}
+.all_menu h1 {
     position: relative;    
     height: 112px;
     margin: 55px 370px 35px 0;
     background: url(../img/all_menu_top.png) repeat-x;
     background-position: right top;
 }
-.all_menu h2::after {
+.all_menu h1::after {
     content: '';
     display: inline-block;
     position: absolute;
@@ -260,14 +345,15 @@ header .btn_wrap > button.bg_blue {
 }
 .all_menu .gnb_layout li > ul > li > a {
     display: block;
-    padding: 5px 0;
+    padding: 6px 0;
     font-size: .938rem;
     font-weight: 400;
+    line-height: 1.25rem;
 }
-.all_menu .gnb_layout > li:last-child {
+.all_menu .gnb_layout > .login_menu {
     padding-top: 57px;
 }
-.all_menu .gnb_layout > li:last-child a::before {
+.all_menu .gnb_layout > .login_menu a::before {
     content: '';
     display: inline-block;
     width: 3px;
@@ -297,5 +383,47 @@ header .btn_wrap > button.bg_blue {
     }
     .nav > ul > li > a {
         padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    
+    /* 웹 메뉴 */
+    .nav,
+    header .btn_wrap > a {
+        display: none;
+    }
+    header .btn_wrap {
+        width: auto;
+    }
+
+    /* 검색 */    
+    div.search_wrap {
+        justify-content: start;
+        padding-left: auto;
+    }
+    .search_wrap form {
+        width: calc(100% - 234px);
+        padding: 0 2vw 0 8vw;
+    }
+    .search_wrap .search_inner input {
+        width: 100%;
+    }
+
+
+
+    .all_menu {
+        display: block;
+    }
+    .all_menu h1 a,
+    .all_menu .btn_wrap .btn-search {
+        display: inline-block;
+    }
+    .all_menu h1::after {
+        display: none;
+    }
+    .all_menu h1 {
+        background: #fff;
+        margin: 0;
     }
 }

@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="format-detection" content="telephone=no">	
-	<title>디지털헬스케어 소프트웨어 시험평가센터</title>
-    <link rel="shortcut icon" type="image/x-icon" href="cubersc/cube.ico">	
+    <meta name="format-detection" content="telephone=no">
+    <title>디지털헬스케어 소프트웨어 시험평가센터</title>
+    <link rel="shortcut icon" type="image/x-icon" href="cubersc/cube.ico">
     <!-- script -->
     <!-- 
     
@@ -36,6 +37,8 @@
     <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/reset.css">
     <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/main.css">
     <link rel="stylesheet" type="text/css" href="cubersc/templete/web/css/header.css">
+
+    <script src="cubersc/templete/web/js/main_new.js"></script>
 </head>
 
 <body>
@@ -67,7 +70,7 @@
                             <li>
                                 <a href="">컨소시엄 소개</a>
                             </li>
-                        </ul>                        
+                        </ul>
                     </li>
                     <li>
                         <a href="">교육/포럼/설문조사</a>
@@ -81,7 +84,7 @@
                             <li>
                                 <a href="">설문조사</a>
                             </li>
-                        </ul>                        
+                        </ul>
                     </li>
                     <li>
                         <a href="">정보마당</a>
@@ -127,41 +130,49 @@
                     </li>
                 </ul>
             </nav>
-            
+
             <div class="btn_wrap">
                 <a href="">로그인</a>
                 <a href="">회원가입</a>
-                <button type="button" class=""><i class="icon_search"></i>검색창 열기</button>
+                <button type="button" class="btn-search"><i class="icon_search"></i>검색창 열기</button>
                 <button type="button" class="bg_blue"><i class="icon_menu"></i>메뉴 열기</button>
-                <div class="search_wrap">
-                    <form name="" role="">
-                        <fieldset>
-                            <legend>검색</legend>
-                            <div class="search_box">
-                                <input type="search" class="search_input" title="검색어를 입력해 주세요." placeholder="검색어를 입력해 주세요.">
-                                <button type="submit" class="search_btn" title="검색">검색</button>
-                                <button type="button" class="close_btn" title="검색창 닫기">검색창 닫기</button>
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
+            </div>
+            <div class="search_wrap ">
+            <!-- 위 search_wrap에 active 클래스로 펼침 -->
+                <form name="" role="">
+                    <fieldset>
+                        <legend class="hide">검색</legend>
+                        <div class="search_inner">
+                            <input type="search" class="search_input" title="검색어를 입력해 주세요." placeholder="검색어를 입력해 주세요.">
+                            <button type="submit" class="search_btn" title="검색">검색</button>
+                            <button type="button" class="close_btn" title="검색창 닫기"><i class="icon_close"></i>검색창 닫기</button>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
 
             <div class="all_menu">
-                <h2>
+                <h1>
+                    <a href="web/main/index.do" title="디지털헬스케어 소프트웨어 시험평가센터 메인이동">
+                        <img src="cubersc/templete/web/img/logo_small.png" alt="디지털헬스케어 소프트웨어 시험평가센터 로고">
+                    </a>
                     <span class="hide">STL</span>
-                </h2>
+                </h1>           
+                <div class="btn_wrap">
+                    <button type="button" class="btn-search"><i class="icon_search"></i>검색창 열기</button>
+                    <button type="button" class="bg_blue"><i class="icon_close"></i>메뉴 닫기</button>
+                </div>
                 <ul class="gnb_layout">
                     <li>
                         <a href="">사업소개</a>
                         <ul>
                             <li>
-                                <a href="">디지털헬스케어 소프트웨어 시험평가 센터</a>
+                                <a href="">디지털헬스케어 소프트웨어 <br>시험평가 센터</a>
                             </li>
                             <li>
                                 <a href="">컨소시엄 소개</a>
                             </li>
-                        </ul>                        
+                        </ul>
                     </li>
                     <li>
                         <a href="">교육/포럼/설문조사</a>
@@ -175,7 +186,7 @@
                             <li>
                                 <a href="">설문조사</a>
                             </li>
-                        </ul>                        
+                        </ul>
                     </li>
                     <li>
                         <a href="">정보마당</a>
@@ -219,17 +230,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="login_menu">
                         <ul>
                             <li><a href="">로그인</a></li>
                             <li><a href="">회원가입</a></li>
                             <li><a href="">사이트맵</a></li>
                         </ul>
                     </li>
-                </ul>
-                <div class="btn_wrap">
-                    <button type="button" class="bg_blue"><i class="icon_close"></i>메뉴 닫기</button>
-                </div>
+                </ul>                
             </div>
         </header>
 
@@ -379,9 +387,10 @@
                 </li>
             </ul>
             <p>본 웹사이트는 이메일 주소가 무단 수집되는 것을 거부하며, 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.</p>
-            <p class="copy">Copyright &#40;c&#41; 2023 Korea Testinglaboratory. All rights Reserved.</p>            
+            <p class="copy">Copyright &#40;c&#41; 2023 Korea Testinglaboratory. All rights Reserved.</p>
         </footer>
 
-    </div>    
+    </div>
 </body>
+
 </html>
