@@ -29,11 +29,11 @@
 header {
     display: flex;
     position: relative;
+    z-index: 50;
     border-bottom: 1px solid #888;
     font-family: 'NanumSquareAc';
     color: #222;
     align-items: center;
-    z-index: 50;
 }
 header h1 {
     position: static;
@@ -225,17 +225,17 @@ header .btn_wrap > button.bg_blue {
 }
 div.search_wrap {
     display: flex;
+    visibility: hidden;
     position: absolute;
     top: 100%;
     width: 100%;
     height: 0;
-    visibility: hidden;
-    opacity: 0;
     border-top: 1px solid #e1e1e1;
     -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
     background: #fff; 
     transition: all .4s cubic-bezier(.59, .01, .43, 1);
+    opacity: 0;
     justify-content: center;
     align-items: center;
 }
@@ -244,13 +244,13 @@ div.search_wrap {
     content: '';
     display: block;
     visibility: hidden;
-    opacity: 0;
     position: absolute;
     top: 100%;
     width: 100%;
     height: 100vh;
     min-height: 800px;
     background: rgba(0,0,0,.5);
+    opacity: 0;
 }
 .search_wrap .search_inner {
     display: flex;
@@ -268,13 +268,13 @@ div.search_wrap {
     color: #d3d3d3;
 }
 .search_wrap .search_inner input:focus {
-    outline: 0;
     border: 2px solid #222;
+    outline: 0;
 }
 .search_wrap .search_inner .search_btn {
+    height: 68px;
     padding: 24px 50px 23px;
     background: #0060ce;
-    height: 68px;
     font: 700 1.125rem 'NanumSquare';
     color: #fff;
 }
@@ -290,8 +290,13 @@ div.search_wrap {
 }
 
     /* 전체 메뉴 */
+
+.all_menu.active {
+    visibility: visible;
+    opacity: 1;    
+}
 .all_menu {
-    /* display: none; */
+    visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -300,6 +305,8 @@ div.search_wrap {
     height: 100vh;
     min-height: 800px;
     background: #f4f4f4 url(../img/all_menu_bg.png) repeat-x bottom 80px right;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
 }
 .all_menu .btn_wrap {
     position: absolute;
@@ -396,11 +403,11 @@ div.search_wrap {
     header .btn_wrap {
         width: auto;
     }
-
     /* 검색 */    
     div.search_wrap {
-        justify-content: start;
+        z-index: 101;
         padding-left: auto;
+        justify-content: start;
     }
     .search_wrap form {
         width: calc(100% - 234px);
@@ -409,13 +416,21 @@ div.search_wrap {
     .search_wrap .search_inner input {
         width: 100%;
     }
-
-
-
+    /* 모바일 사이즈 메뉴 */
+    .all_menu.active {
+        right: 0;
+    }
     .all_menu {
-        display: block;
+        visibility: visible;
+        top: 0;
+        right: -100%;
+        left: auto;
+        background-position: bottom 80px center;
+        transition: all .4s cubic-bezier(.59, .01, .43, 1);
+        opacity: 1;
     }
     .all_menu h1 a,
+    .all_menu h1 a img,
     .all_menu .btn_wrap .btn-search {
         display: inline-block;
     }
@@ -423,7 +438,124 @@ div.search_wrap {
         display: none;
     }
     .all_menu h1 {
+        height: 110px;
+        margin: 0;
+        padding: 30px;
+        border-bottom: 1px solid #e1e1e1;
         background: #fff;
+    }
+    .all_menu h1 a {
+        width: 260px;
+        height: 48px;
+        background: none;
+    }
+    /* 모바일 gnb 스타일 */
+    .all_menu .gnb_layout {
+        display: block;
+        width: 90%;
+        max-width: 380px;
+        margin: 0;
+        padding: 30px 50px;
+    }    
+    .all_menu .gnb_layout > li > a {
+        display: block;
+        position: relative;
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+        font-size: 1.375rem;
+    }
+    .all_menu .gnb_layout > li > a:hover,
+    .all_menu .gnb_layout > li:hover > a,
+    .all_menu .gnb_layout > li > a:focus,
+    .all_menu .gnb_layout > li.current > a {
+        border-color: #0061ce;;
+    }
+    .all_menu .gnb_layout > li > a::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 25px;
+        width: 12px;
+        height: 12px;
+        border-top: solid 2px currentColor;
+        border-right: solid 2px currentColor;
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+    }
+    .all_menu .gnb_layout > li.current > a::after,
+    .all_menu .gnb_layout > li.current:hover > a::after,
+    .all_menu .gnb_layout > li.current > a:focus:after {
+        top: 25px;
+        right: 16px;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+    }
+    .all_menu .gnb_layout > li > a:hover::after,
+    .all_menu .gnb_layout > li:hover > a::after,
+    .all_menu .gnb_layout > li > a:focus::after,
+    .all_menu .gnb_layout > li.current > a::after {
+        bottom: auto;
+        left: auto;
+        background: none;
+    }
+    .all_menu .gnb_layout li > ul {
+        display: none;
+        margin: 15px 15px 35px;
+    }
+    .all_menu .gnb_layout li.current > ul {
+        display: block;
+    }
+    .all_menu .gnb_layout li > ul > li > a {
+        padding-left: 20px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .all_menu .gnb_layout li > ul > li > a::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        margin-top: 7px;
+        margin-left: -12px;
+        background-color: currentColor;
+    }
+    .all_menu .gnb_layout li > ul > li + li {
+        margin-top: 8px;
+    }
+    .all_menu .gnb_layout > .login_menu {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px 50px;
+        background: #444;
+    }
+    .all_menu .gnb_layout > .login_menu ul {
+        display: flex;
         margin: 0;
     }
+    .all_menu .gnb_layout .login_menu > ul > li + li {
+        margin-top: 0;
+        margin-left: 10px;
+    }
+    .all_menu .gnb_layout .login_menu > ul > li > a {
+        padding: 10px;
+        font-size: .875rem;
+        font-weight: 200;
+        color: #fff;
+    }
+    .all_menu .gnb_layout > .login_menu a::before {
+        display: none;
+    }
+    .all_menu .gnb_layout .login_menu > ul > li > a:hover {
+        color: #ccc;
+    }
+}
+
+
+
+@media screen and (max-width: 540px) {
+
 }
