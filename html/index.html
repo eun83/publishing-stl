@@ -12,19 +12,20 @@
     <link rel="shortcut icon" type="image/x-icon" href="cubersc/cube.ico">
     <!-- script -->
     <!-- 
-    
         <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
         <script src="cubersc/templete/web/lib/js/jquery.fullPage.js"></script>
      -->
+     <script src="cubersc/templete/web/lib/js/jquery-1.12.4.min.js"></script>
     <script src="cubersc/templete/common/js/jquery-ui.min.js"></script>
-    <script src="cubersc/templete/web/lib/js/jquery-1.12.4.min.js"></script>
     <script src="cubersc/templete/web/lib/js/slick.js"></script>
     
     <!--  -->
+    <script src="cubersc/templete/web/js/common_new.js"></script>
     <script src="cubersc/templete/web/js/main_new.js"></script>
     
-    <script src="cubersc/templete/web/js/common.js"></script>
-    <script src="cubersc/templete/web/js/main.js"></script>
+    <!-- 예전 사이트의 스크립트가 있어서 일단 비활성화 -->
+    <!-- <script src="cubersc/templete/web/js/common.js"></script>
+    <script src="cubersc/templete/web/js/main.js"></script> -->
     <!-- //script -->
     <!-- css -->
     <!--
@@ -136,10 +137,10 @@
             <div class="btn_wrap">
                 <a href="">로그인</a>
                 <a href="">회원가입</a>
-                <button type="button" class="btn-search"><i class="icon_search"></i>검색창 열기</button>
-                <button type="button" class="bg_blue"><i class="icon_menu"></i>메뉴 열기</button>
+                <button type="button" class="btn-search btn_top_search_open"><i class="icon_search"></i>검색창 열기</button>
+                <button type="button" class="bg_blue btn_all_menu_open"><i class="icon_menu"></i>메뉴 열기</button>
             </div>
-            <div class="search_wrap ">
+            <div class="search_wrap">
             <!-- 위 search_wrap에 active 클래스로 펼침 -->
                 <form name="" role="">
                     <fieldset>
@@ -147,13 +148,13 @@
                         <div class="search_inner">
                             <input type="search" class="search_input" title="검색어를 입력해 주세요." placeholder="검색어를 입력해 주세요.">
                             <button type="submit" class="search_btn" title="검색">검색</button>
-                            <button type="button" class="close_btn" title="검색창 닫기"><i class="icon_close"></i>검색창 닫기</button>
+                            <button type="button" class="close_btn btn_top_search_close" title="검색창 닫기"><i class="icon_close"></i>검색창 닫기</button>
                         </div>
                     </fieldset>
                 </form>
             </div>
 
-            <div class="all_menu active">
+            <div class="all_menu">
                 <h1>
                     <a href="web/main/index.do" title="디지털헬스케어 소프트웨어 시험평가센터 메인이동">
                         <img src="cubersc/templete/web/img/m_logo_small.png" alt="디지털헬스케어 소프트웨어 시험평가센터 로고">
@@ -161,8 +162,8 @@
                     <span class="hide">STL</span>
                 </h1>           
                 <div class="btn_wrap">
-                    <button type="button" class="btn-search"><i class="icon_search"></i>검색창 열기</button>
-                    <button type="button" class="bg_blue"><i class="icon_close"></i>메뉴 닫기</button>
+                    <button type="button" class="btn-search btn_top_search_open"><i class="icon_search"></i>검색창 열기</button>
+                    <button type="button" class="bg_blue btn_all_menu_close"><i class="icon_close"></i>메뉴 닫기</button>
                 </div>
                 <ul class="gnb_layout">
                     <li class="current">
