@@ -2,10 +2,12 @@ $(document).ready(function () {
     
     $('.btn_all_menu_open').click(function(){
         $('.all_menu').addClass('active');
+        $('body').css("overflow","hidden");
     });
 
     $('.btn_all_menu_close').click(function(){
         $('.all_menu').removeClass('active');
+        $('body').css("overflow","");
     });
 
     $('.btn_top_search_open').click(function(){
@@ -22,7 +24,8 @@ $(document).ready(function () {
     
     $('.all_menu > .gnb_layout > li').click(function (e) {
         let idx = $(this).index();
-        if($('.all_menu > .gnb_layout > li').eq(idx).hasClass('current') == false){
+        if($('.all_menu > .gnb_layout > li').eq(idx).hasClass('current') == false &&
+        idx !== $('.all_menu > .gnb_layout > li').length - 1){
             $('.all_menu > .gnb_layout > li').removeClass('current')
             $('.all_menu > .gnb_layout > li').eq(idx).addClass('current')
         }else{
