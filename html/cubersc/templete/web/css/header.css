@@ -81,6 +81,7 @@ header h1 {
     opacity: 0;
     background-color: white;
 }
+.nav .gnb_layout.open::before,
 .nav .gnb_layout:hover::before,
 .nav .gnb_layout:focus::before { 
     visibility:visible;
@@ -109,6 +110,7 @@ header h1 {
     transform: translateX(-20%); 
     opacity: 0;
 }
+.nav .gnb_layout > li.current > ul,
 .nav .gnb_layout > li:hover > ul,
 .nav .gnb_layout > li:focus > ul { 
     visibility:visible;

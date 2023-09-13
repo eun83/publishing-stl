@@ -1,5 +1,20 @@
 $(document).ready(function () {
     
+    // 어설픈 메뉴열기 ㅋㅋ
+    $('.nav > .gnb_layout > li').click(function(){
+        $('.nav > .gnb_layout > li').addClass('current');
+        $('.nav > .gnb_layout').addClass('open');
+    });
+
+    $('.nav > .gnb_layout > li').click(function(){
+        $('.nav > .gnb_layout > li').removeClass('current');
+        $('.nav > .gnb_layout').removeClass('open');
+    });
+    // 위에꺼 고쳐주세요 ㅠㅠ 스크립트 안넣으니 태블릿에서 메뉴가 안열림
+
+
+
+
     $('.btn_all_menu_open').click(function(){
         $('.all_menu').addClass('active');
         $('body').css("overflow","hidden");
