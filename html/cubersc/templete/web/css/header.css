@@ -188,7 +188,6 @@ header > .btn_wrap > a:focus {
     color: #0060ce;
     transition: all 0.2s ease-in-out;
 }
-
     /* right btns */
 header > .btn_wrap {
     display: flex;
@@ -215,7 +214,6 @@ header .btn_wrap > button.bg_blue {
     background: #0060ce;
     color: #fff;
 }
-
     /* 검색 */
 .search_wrap.active,
 .search_wrap.active::before {
@@ -296,9 +294,7 @@ div.search_wrap {
     left: auto;
     margin-top: 4px;
 }
-
     /* 전체 메뉴 */
-
 .all_menu.active {
     visibility: visible;
     opacity: 1;    
@@ -382,8 +378,6 @@ div.search_wrap {
     background: currentColor;
     vertical-align: middle;
 }
-
-
 
 /* ---------- respond ---------- */
 
@@ -604,13 +598,12 @@ div.search_wrap {
     .all_menu .btn_wrap .btn_top_search_open {
         display: none;
     }
-
+    /* mobile gnb */
     .all_menu .gnb_layout {
         width: 100%;
         max-width: none;
         padding: 30px 30px 80px;
     }
-
 }
 
 @media screen and (max-width: 425px) {
