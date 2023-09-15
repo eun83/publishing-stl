@@ -95,9 +95,10 @@
     height: 83px;
     background: url(../img/visual_slide_logo.png) no-repeat;
 }
-.main .slider_dots {    
+.main .slider_dots { 
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse;   
+    margin-top: 10px;
     align-items: end;
 }
 .main .slider_dots ul {
@@ -277,6 +278,44 @@
 .business .inner > div {
     display: flex;
 }
+.business .list_slider {
+    width: 100%;
+    max-width: 400px;
+    padding-right: 100px;
+    margin-top: 200px;
+}
+.business .list_slider li a {
+    display: block;
+    position: relative;
+    padding: 20px 0 15px;
+    border-bottom: 1px solid #cecece;
+    font: 500 1.125rem 'NanumSquare';
+    color: #020202;
+    transition: all .3s ease-in;
+}
+.business .list_slider li a .icon_arrow {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    right: 22px;
+    margin-top: -22px;
+    transition: all .3s ease-in;
+}
+.business .list_slider li.current a,
+.business .list_slider li a:hover,
+.business .list_slider li a:focus {
+    font-weight: 600;
+    color: #000;
+    border-color: #020202;
+    
+}
+.business .list_slider li.current .icon_arrow,
+.business .list_slider li a:hover .icon_arrow,
+.business .list_slider li a:focus .icon_arrow {
+    visibility: visible;
+    opacity: 1;
+}
+
 .business .slider_area {
     flex-grow: 1;
 }
