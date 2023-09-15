@@ -4,11 +4,12 @@
       "content",
       "display",
       "visibility",
+      "opacity",
       "overflow",
       "position",
       "flex",
-      "flex-direction",
       "flex-wrap",
+      "flex-direction",
       "top",
       "right",
       "bottom",
@@ -42,8 +43,10 @@
       "border-radius",
       "box-shadow",
       "background",
+      "background-image",
       "background-size",
       "background-position",
+      "background-clip",
       "font",
       "font-size",
       "font-weight",
@@ -69,7 +72,6 @@
       "transition",
       "outline",
       "cursor",
-      "opacity",
     
     ]
   }

@@ -115,9 +115,9 @@ header h1 {
 .nav .gnb_layout > li:focus > ul { 
     visibility:visible;
     opacity:1;
-    -webkit-transition-delay: .3s;
-    -o-transition-delay: .3s;
-    transition-delay: .3s;
+    -webkit-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
 }
 .nav .gnb_layout ul a {
     padding: 10px 15px;
