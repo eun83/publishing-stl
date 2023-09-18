@@ -19,7 +19,7 @@
     font-weight: 800;
     font-family:"relaxia";
     line-height: 1.75rem;
-    color: #949494;
+    color: #858585;
     letter-spacing: 3px;
     text-transform: uppercase;
 }
@@ -291,8 +291,8 @@
 .business .list_slider {
     width: 100%;
     max-width: 430px;
-    padding-right: 130px;
     margin-top: 200px;
+    padding-right: 130px;
 }
 .business .list_slider li a {
     display: block;
@@ -304,9 +304,9 @@
     transition: all .3s ease-in;
 }
 .business .list_slider li a .icon_arrow {
-    position: absolute;
     visibility: hidden;
     opacity: 0;
+    position: absolute;
     right: 22px;
     margin-top: -22px;
     transition: all .3s ease-in;
@@ -326,8 +326,8 @@
     opacity: 1;
 }
 .business .slider_area {
-    flex-grow: 1;
     width: calc(100% - 430px);
+    flex-grow: 1;
 }
 .business .slider {
     position: relative;
@@ -356,31 +356,30 @@
 }
 .business .slider::after {
     content: '';
-    position: absolute;
     display: block;
-    background: url(../img/stl_triangle_img.svg) no-repeat;
+    position: absolute;
     width: 132px;
     height: 98px;
     margin-top: -90px;
+    background: url(../img/stl_triangle_img.svg) no-repeat;
 }
 .business .slider div {
     display: inline-block;
+    margin: 0 0 45px 35px;
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.5rem;
     vertical-align: bottom;
-    margin: 0 0 45px 35px;
 }
 .business .slider div h4 {
-    font-size: 2.125rem;
     margin-bottom: 40px;
+    font-size: 2.125rem;
 }
 
-
 /* about STL & community */
-.about_comm {
+.about_comm .inner {
     display: flex;
-    padding: 90px 100px;
+    padding: 100px 0 130px;
 }
 .about_stl {
     width: calc(70% - 30px);
@@ -391,18 +390,43 @@
 }
 .about_stl > ul li {
     display: flex;
-    width: 33.3%;
-    background: #444;
+    position: relative;
+    min-height: 405px;
+    flex-grow: 1;
+}
+.about_stl > ul li:nth-child(1) {
+    background: url(../img/about_img_01.jpg) no-repeat;
+}
+.about_stl > ul li:nth-child(2) {
+    background: url(../img/about_img_02.jpg) no-repeat;
+}
+.about_stl > ul li:nth-child(3) {
+    background: url(../img/about_img_03.jpg) no-repeat;
+}
+.about_stl > ul li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    transition: all .4s cubic-bezier(.59, .01, .43, 1);
+}
+.about_stl > ul li:hover::before, 
+.about_stl > ul li:focus::before { 
+    height: 35%;
 }
 .about_stl > ul li a {
     display: flex;
-    min-height: 405px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
     padding: 55px;
     font-size: 1.5rem;
     font-weight: 600;
     color: #fff;
     align-items: end;
-
 }
 .community {
     width: 30%;
@@ -413,7 +437,7 @@
 .community > ul a {
     display: flex;
     width: 100%;
-    padding: 40px 55px;
+    padding: 46px 55px;
     background: #f4f4f4;
     font-size: 1.375rem;
     font-weight: 600;
@@ -422,19 +446,52 @@
     
 }
 .community a span {
+    position: relative;
     margin-right: auto;
+    flex-grow: 1;
 }
-.community a figure {
-    width: 50px;
-    height: 45px;
-    margin: 0 10px; 
-    background: #0060ce;
+.community a span::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    transition: all 0.2s ease-in-out;
+}
+.community li:nth-child(1) a span::after {
+    background: url(../img/community_icon_01.svg) no-repeat;
+}
+.community li:nth-child(2) a span::after {
+    background: url(../img/community_icon_02.svg) no-repeat;
+}
+.community li:nth-child(3) a span::after {
+    background: url(../img/community_icon_03.svg) no-repeat;
+}
+.community > ul a:hover,
+.community > ul a:focus {
+    background: #5599f4;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+.community li:nth-child(1):hover a span::after,
+.community li:nth-child(1):focus a span::after {
+    background: url(../img/community_icon_01_hover.svg) no-repeat;
+}
+.community li:nth-child(2):hover a span::after,
+.community li:nth-child(2):focus a span::after {
+    background: url(../img/community_icon_02_hover.svg) no-repeat;
+}
+.community li:nth-child(3):hover a span::after,
+.community li:nth-child(3):focus a span::after {
+    background: url(../img/community_icon_03_hover.svg) no-repeat;
 }
 .community .icon_arrow {
     width: 20px;
     height: 20px;
 }
-
 
 /* partners */
 .partners {
