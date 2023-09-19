@@ -42,6 +42,10 @@ header h1 {
     z-index: auto;
     margin: 0 50px;
 }
+header h1 img {
+    width: 260px;
+    height: 48px;
+}
     /* nav gnb 메뉴 */
 .nav {
     width: calc(100% - 725px);
@@ -342,7 +346,7 @@ div.search_wrap {
     right: -50px;
     width: 103px;
     height: 63px;
-    background: url(../img/all_menu_toptxt.png) no-repeat;
+    background: url(../img/stl_text_img.svg) no-repeat;
 }
 .all_menu .gnb_layout {
     display: grid;
@@ -392,7 +396,7 @@ div.search_wrap {
         display: block;
         width: 143px;
         height: 73px;
-        background: url(../img/logo_small.png) no-repeat;
+        background: url(../img/tablet_logo.svg) no-repeat;
     }
     header h1 a > img {
         display: none;
@@ -429,7 +433,7 @@ div.search_wrap {
         width: auto;
         height: 48px;
         max-width: 260px;
-        background: url(../img/m_logo_small.png) no-repeat left center;
+        background: url(../img/web_logo.svg) no-repeat left center;
         background-size: 100%;
     }    
     /* mobile header */
@@ -451,6 +455,10 @@ div.search_wrap {
         position: sticky;
         top: 0;
         z-index: 101;
+    }
+    .all_menu h1 a img {
+        width: 260px;
+        height: 48px;
     }
     .all_menu h1 a,
     .all_menu h1 a img,
@@ -613,7 +621,7 @@ div.search_wrap {
     header h1 a,
     .all_menu h1 a {
         height: 73px;
-        background: url(../img/logo_small.png) no-repeat left center;
+        background: url(../img/tablet_logo.svg) no-repeat left center;
     }
     .all_menu h1 a img {
         display: none;

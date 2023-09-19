@@ -23,7 +23,8 @@
     letter-spacing: 3px;
     text-transform: uppercase;
 }
-.main .inner {
+.main .inner,
+footer .inner {
     width: 100%;
     max-width: var(--full_size);
     margin: 0 auto;
@@ -500,49 +501,63 @@
     background: #313131;
     text-align: center;
 }
+.main .partners h3 {
+    margin-bottom: 70px;
+    color: #e0e0e0;
+}
+.partners .slider_area div + div {
+    margin-left: 100px;
+}
 
 /* footer */
 footer {
     width: 100%;
     margin: 0;
-    padding: 90px 100px;
+    padding: 90px 0;
     background: #0d0d0d;
     font-size: .875rem;
     font-weight: 400;
     font-family: 'NanumSquareAc';
     overflow-x: hidden;
 }
-footer > ul {
+footer h2 img {
+    width: 260px;
+    height: 48px;
+    filter: contrast(0) brightness(115%);
+}
+footer ul {
     display: flex;
     flex-wrap: wrap;
     margin-top: 55px;
-    color: #fff;
 }
-footer > ul li {
+footer ul li {
     margin-right: 35px;
 }
-footer > ul li b {
+footer ul li b {
     margin-right: 6px;
-    color: #ccc;
+    color: #ababab;
 }
-footer > ul li span {
+footer ul li span {
     color: #999;
 }
-footer > ul li:first-child b,
-footer > ul li:first-child span {
-    color: #fff;
+footer ul li:first-child b,
+footer ul li:first-child span {
+    color: #f4f4f4;
+    font-weight: 300;
 }
-footer > ul li:last-child span a {
+footer ul li:last-child span a {
     letter-spacing: 1px;
 }
 footer p {
     margin-top: 5px;
-    color: #fff;
+    color: #f4f4f4;
+    font-weight: 300;
 }
 footer .copy {
     margin-top: 55px;
     color: #666;
     letter-spacing: .5px;
+    font-weight: 400;
 }
 
 
