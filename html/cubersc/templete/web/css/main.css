@@ -234,9 +234,10 @@ footer .inner {
 .service li h4 + div > a {
     display: inline-block;
     margin: 15px 0 0 7px;
-    padding: 0 8px;
+    padding: 2px 8px;
     background: #003dce;
     font-size: .9375rem;
+    line-height: 1rem;
     color: #fff;
 }
 .service li h4 + div {
@@ -648,7 +649,10 @@ footer .copy {
     }
     /* 비지니스 */
     .main .business {
-        background-position: right 41vw top 160px, left 50vw bottom 80px
+        background-position: right 41vw top 160px, left 50vw bottom 80px;
+    }
+    .business .slider {
+        padding: 55px 0 10px;
     }
     .business .list_slider {
         max-width: 380px;
@@ -659,7 +663,6 @@ footer .copy {
     }
     .business .slider div {
         height: 325px;
-        margin: 55px 0 0;
         font-size: 1rem;
     }
     .business .slider div h4 {
@@ -669,11 +672,12 @@ footer .copy {
         position: absolute;
         right: 80px;
         bottom: 10px;
+        z-index: -1;
         width: 375px;
         height: 235px;
     }    
     .business .slider::after {
-        top: 330px;
+        top: 375px;
         right: 420px;
         width: 80px;
         height: 60px;
@@ -688,20 +692,27 @@ footer .copy {
         max-width: none;
         padding: 0 20px;
     }
-
+    /* 비주얼 */
     .main .visual .slider::after {
         right: 20px;
     }
-        
+    /* 서비스 */
     .service ul li {
         width: 23.5%;
     }
 }
 
 @media screen and (max-width: 1080px) {
-
+    /* 서비스 */
     .main .service {
         min-height: 500px;
+    }
+    .main .service h3 {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        padding: 0 2px;
+        background: rgba(255, 255, 255, .9);
     }
     .service ul li {
         padding: 30px 30px 0;
@@ -713,5 +724,160 @@ footer .copy {
     }
     .business .slider_area {
         width: calc(100% - 320px);
+    }
+    /* 베너 & 커뮤니티 */
+    .about_stl > ul li a {
+        padding: 30px 30px 55px;
+    }
+    .community > ul a {
+        padding: 46px 30px;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    /* 비주얼 */
+    .main .txt_area {
+        top: 70px;
+        width: calc(100% - 140px);
+        margin: 0 50px;
+    }
+    .main .txt_area > h2 {
+        font-size: 1.875rem;
+    }
+    .main .txt_area p strong {
+        margin: 50px 0 25px;
+        font-size: 2.125rem;
+    }
+    .main .txt_area p b {
+        font-size: 1.875rem;
+    }
+    .main .txt_area h2 + p {
+        margin-bottom: 15px;
+    }    
+    .main .visual .slider div img {        
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        object-position: center 30%;
+    }
+    .main .visual .slider::after {
+        bottom:25px;
+    }
+    .main .slider_dots {
+        margin: 10px 0 20px;
+    }
+    /* 서비스 */
+    .main .service {
+        padding-bottom: 60px;
+    }
+    .service ul {
+        gap: 20px;
+    }
+    .service ul li {
+        flex: 1 1 calc(50% - 10px);
+        height: 230px;
+        padding: 40px 40px 0;
+    }
+    .service ul li:hover, 
+    .service ul li:focus {
+        height: 230px;
+    }
+    .service li:hover h4 + div, 
+    .service li:focus h4 + div {
+        display: none;
+    }    
+    .service li h4::before {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 20px;
+    }
+    .service li h4 span {
+        font-size: 1rem;
+    }
+    /* 비지니스 */
+    .main .business {
+        padding: 30px 0 50px;
+        background-position: right 20vw top 120px, left 25vw bottom 40px;
+        background-size: 150%;
+    }
+    .business .list_slider {
+        display: none;
+    }
+    .business .slider::before {
+        width: 305px;
+        height: 200px;
+        right: 60px;
+    }
+    .business .slider::after {
+        width: 65px;
+        height: 47px;
+        top: 360px;
+        right: 335px
+    }
+    .business .slider div {
+        height: 310px;
+    }
+    .main .btn_plus {
+        bottom: 22px;
+    }
+    /* 베너 & 커뮤니티 */
+    .main .about_comm {
+        padding: 60px 0;
+    }
+    .about_comm .inner {
+        display: block;
+    }
+    .about_stl {
+        width: 100%;
+        margin-right: 0;
+    }
+    .about_stl > ul li a {
+        padding: 40px 40px 55px;
+    }
+    .community {
+        width: 100%;
+        margin-top: 55px;
+    }
+    .community > ul a {
+        padding: 26px 40px;
+    }
+    /* 파트너스 */
+    .partners {
+        padding: 60px 0;
+    }
+    .main .partners h3 {
+        margin-bottom: 55px;
+    }
+    .partners .slider_area div img {
+        height: 40px;
+        object-fit: cover;
+    }
+    .partners .slider_area div + div {
+        margin-left: 60px;
+    }
+    /* 푸터 */
+    footer {
+        padding: 60px 0;
+        font-size: .75rem;
+    }
+    footer h2 {
+        text-align: left;
+    }
+    footer h2 img {
+        width: 222px;
+        height: 43px;
+    }
+    footer ul {
+        margin-top: 30px;
+    }
+    footer ul li {
+        margin-right: 15px;
+    }
+    footer ul li:first-child {
+        margin: 0;
+        width: 100%;
+    }
+    footer .copy {
+        margin-top: 20px;
     }
 }
