@@ -7,6 +7,7 @@
     font-size: 1rem;
     letter-spacing: 0;
     word-break: keep-all;
+    overflow-x: hidden;
 }
 .wrapper section h3 {
     margin-bottom: 30px;
@@ -20,11 +21,6 @@
 }
 .main {
     margin-top: 111px;
-}
-.main, footer {
-    position: relative;
-    width: 100%;
-    overflow-x: hidden;
 }
 .main .inner,
 footer .inner {
@@ -590,7 +586,7 @@ footer .copy {
     footer .inner {
         max-width: 1500px;
     }
-    /* 비지니스 */
+    /* business */
     .business .list_slider {
         max-width: 350px;
         padding-right: 80px;
@@ -606,7 +602,7 @@ footer .copy {
     footer .inner {
         max-width: 1400px;
     }
-    /* 비지니스 */
+    /* business */
     .main .business {
         min-height: auto;
         padding: 80px 0 100px;
@@ -636,7 +632,7 @@ footer .copy {
     footer .inner {
         max-width: 1232px;
     }
-    /* 비주얼 */
+    /* visual */
     .main .visual .slider::after {
         right: 3%;
         bottom: 335px;
@@ -646,7 +642,7 @@ footer .copy {
         z-index: 1;
         margin-top: -320px;
     }
-    /* 서비스 */
+    /* service */
     .main .service {
         margin-top: 0;
     }
@@ -657,7 +653,7 @@ footer .copy {
     .service ul li + li {
         margin-left: 0;
     }
-    /* 비지니스 */
+    /* business */
     .main .business {
         background-position: right 41vw top 160px, left 50vw bottom 80px;
     }
@@ -702,18 +698,18 @@ footer .copy {
         max-width: none;
         padding: 0 20px;
     }
-    /* 비주얼 */
+    /* visual */
     .main .visual .slider::after {
         right: 20px;
     }
-    /* 서비스 */
+    /* service */
     .service ul li {
         width: 23.5%;
     }
 }
 
 @media screen and (max-width: 1080px) {
-    /* 서비스 */
+    /* service */
     .main .service {
         min-height: 500px;
     }
@@ -727,7 +723,7 @@ footer .copy {
     .service ul li {
         padding: 30px 30px 0;
     }
-    /* 비지니스 */
+    /* business */
     .business .list_slider {
         max-width: 320px;
         padding-right: 60px;
@@ -735,7 +731,7 @@ footer .copy {
     .business .slider_area {
         width: calc(100% - 320px);
     }
-    /* 베너 & 커뮤니티 */
+    /* about STL & community */
     .about_stl > ul li a {
         padding: 30px 30px 55px;
     }
@@ -745,7 +741,7 @@ footer .copy {
 }
 
 @media screen and (max-width: 910px) {
-    /* 비주얼 */
+    /* visual */
     .main .txt_area {
         top: 70px;
         width: calc(100% - 140px);
@@ -776,7 +772,7 @@ footer .copy {
     .main .slider_dots {
         margin: 10px 0 20px;
     }
-    /* 서비스 */
+    /* service */
     .main .service {
         padding-bottom: 60px;
     }
@@ -805,7 +801,7 @@ footer .copy {
     .service li h4 span {
         font-size: 1rem;
     }
-    /* 비지니스 */
+    /* business */
     .main .business {
         padding: 30px 0 50px;
         background-size: 150%;
@@ -831,7 +827,7 @@ footer .copy {
     .business .btn_plus {
         bottom: 22px;
     }
-    /* 베너 & 커뮤니티 */
+    /* about STL & community */
     .main .about_comm {
         padding: 60px 0;
     }
@@ -852,7 +848,7 @@ footer .copy {
     .community > ul a {
         padding: 26px 40px;
     }
-    /* 파트너스 */
+    /* partners */
     .partners {
         padding: 60px 0;
     }
@@ -866,7 +862,7 @@ footer .copy {
     .partners .slider_area div + div {
         margin-left: 60px;
     }
-    /* 푸터 */
+    /* footer */
     footer {
         padding: 60px 0;
         font-size: .75rem;
@@ -894,7 +890,7 @@ footer .copy {
 }
 
 @media screen and (max-width: 550px) {
-    /* 비주얼 */
+    /* visual */
     .main .txt_area {
         margin: 0 30px;
     }
@@ -909,11 +905,11 @@ footer .copy {
         font-size: 1.5rem;
         line-height: 2rem;
     }
-    /* 서비스 */
+    /* service */
     .service ul li {
         padding: 30px 30px 0;
     }
-    /* 베너 */
+    /* about STL & community */
     .about_stl > ul li a {
         padding: 30px 30px 55px;
     }
@@ -923,7 +919,7 @@ footer .copy {
 }
 
 @media screen and (max-width: 480px) {
-
+    /* visual */
     .main .txt_area {
         top: 50px;
         width: calc(100% - 60px);
@@ -935,7 +931,7 @@ footer .copy {
     .main .visual .slider div img {
         min-height: 520px;
     }
-
+    /* service */
     .service ul {
         display: block;
     }
@@ -958,8 +954,7 @@ footer .copy {
         top: 0;
         left: 0;
     }
-
-
+    /* business */
     .business .slider {
         padding: 45px 0 10px;
     }
@@ -985,7 +980,7 @@ footer .copy {
     .business .slider div {
         height: 300px;
     }
-    
+    /* about STL & community */
     .about_stl > ul {
         display: block;
     }
@@ -999,6 +994,5 @@ footer .copy {
     .about_stl > ul li:hover::before, 
     .about_stl > ul li:focus::before { 
         height: 45%;
-    }
-    
+    }    
 }
