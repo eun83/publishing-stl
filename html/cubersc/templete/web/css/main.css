@@ -360,7 +360,7 @@ footer .inner {
     content: '';
     display: block;
     position: absolute;
-    top: 295px;
+    bottom: 0;
     width: 132px;
     height: 98px;
     background: url(../img/stl_triangle_img.svg) no-repeat;
@@ -400,12 +400,15 @@ footer .inner {
 }
 .about_stl > ul li:nth-child(1) {
     background: url(../img/about_img_01.jpg) no-repeat;
+    background-size: cover;
 }
 .about_stl > ul li:nth-child(2) {
     background: url(../img/about_img_02.jpg) no-repeat;
+    background-size: cover;
 }
 .about_stl > ul li:nth-child(3) {
     background: url(../img/about_img_03.jpg) no-repeat;
+    background-size: cover;
 }
 .about_stl > ul li::before {
     content: '';
@@ -614,9 +617,9 @@ footer .copy {
         margin-left: 65px;
     }
     .business .slider::after {
-        top: 240px;
         width: 108px;
         height: 80px;
+        bottom: 20px;
     }
 }
 
@@ -677,10 +680,10 @@ footer .copy {
         height: 235px;
     }    
     .business .slider::after {
-        top: 375px;
         right: 420px;
         width: 80px;
         height: 60px;
+        bottom: 0;
     }
 }
 
@@ -782,6 +785,7 @@ footer .copy {
     .service ul li:focus {
         height: 230px;
     }
+    .service li h4 + div,
     .service li:hover h4 + div, 
     .service li:focus h4 + div {
         display: none;
@@ -811,13 +815,13 @@ footer .copy {
     .business .slider::after {
         width: 65px;
         height: 47px;
-        top: 360px;
-        right: 335px
+        right: 335px;
+        bottom: 13px;
     }
     .business .slider div {
         height: 310px;
     }
-    .main .btn_plus {
+    .business .btn_plus {
         bottom: 22px;
     }
     /* 베너 & 커뮤니티 */
@@ -880,4 +884,114 @@ footer .copy {
     footer .copy {
         margin-top: 20px;
     }
+}
+
+@media screen and (max-width: 550px) {
+    /* 비주얼 */
+    .main .txt_area {
+        margin: 0 30px;
+    }
+    .main .txt_area > h2 {
+        font-size: 1.5rem;
+    }
+    .main .txt_area p strong {
+        font-size: 2rem;
+        margin: 40px 0 20px;
+    }
+    .main .txt_area p b {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    /* 서비스 */
+    .service ul li {
+        padding: 30px 30px 0;
+    }
+    /* 베너 */
+    .about_stl > ul li a {
+        padding: 30px 30px 55px;
+    }
+    .community > ul a {
+        padding: 26px 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .main .txt_area {
+        top: 50px;
+        margin: 0 10px;
+        width: calc(100% - 60px);
+    }
+    .main .txt_area p strong {
+        margin: 20px 0 10px;
+    }
+    .main .visual .slider div img {
+        min-height: 520px;
+    }
+
+    .service ul {
+        display: block;
+    }
+    .service ul li {
+        width: 100%;
+        height: auto;
+        padding: 30px 30px 20px;
+        margin-bottom: 10px;
+    }
+    .service ul li:hover, 
+    .service ul li:focus {
+        height: auto;
+    }
+    .service li h4 {
+        padding: 0 0 0 80px;
+        position: relative;
+    }
+    .service li h4::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+
+    .business .slider {
+        padding: 45px 0 10px;
+    }
+    .business .slider div {
+        margin: 0 15px 45px; 
+    }
+    .business .slider div h4 {
+        margin-bottom: 30px;
+    }
+    .business .slider::before {
+        width: 210px;
+        background-position: right bottom;
+        height: 140px;
+        right: 60px;
+    }
+    .business .slider::after {
+        width: 50px;
+        height: 38px;
+        top: auto;
+        bottom: 10px;
+        right: 250px;
+    }
+    .business .slider div {
+        height: 300px;
+    }
+    
+    .about_stl > ul {
+        display: block;
+    }
+    .about_stl > ul li {
+        width: 100%;
+        min-height: 200px;
+    }
+    .about_stl > ul li a {
+        padding: 30px;
+    }
+    .about_stl > ul li:hover::before, 
+    .about_stl > ul li:focus::before { 
+        height: 45%;
+    }
+    
 }
