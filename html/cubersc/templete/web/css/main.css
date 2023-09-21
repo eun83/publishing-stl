@@ -18,6 +18,14 @@
     letter-spacing: 3px;
     text-transform: uppercase;
 }
+.main {
+    margin-top: 111px;
+}
+.main, footer {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
 .main .inner,
 footer .inner {
     width: 100%;
@@ -524,7 +532,6 @@ footer {
     font-size: .875rem;
     font-weight: 400;
     font-family: 'NanumSquareAc';
-    overflow-x: hidden;
 }
 footer h2 img {
     width: 260px;
@@ -617,9 +624,9 @@ footer .copy {
         margin-left: 65px;
     }
     .business .slider::after {
+        bottom: 20px;
         width: 108px;
         height: 80px;
-        bottom: 20px;
     }
 }
 
@@ -681,9 +688,9 @@ footer .copy {
     }    
     .business .slider::after {
         right: 420px;
+        bottom: 0;
         width: 80px;
         height: 60px;
-        bottom: 0;
     }
 }
 
@@ -801,22 +808,22 @@ footer .copy {
     /* 비지니스 */
     .main .business {
         padding: 30px 0 50px;
-        background-position: right 20vw top 120px, left 25vw bottom 40px;
         background-size: 150%;
+        background-position: right 20vw top 120px, left 25vw bottom 40px;
     }
     .business .list_slider {
         display: none;
     }
     .business .slider::before {
+        right: 60px;
         width: 305px;
         height: 200px;
-        right: 60px;
     }
     .business .slider::after {
-        width: 65px;
-        height: 47px;
         right: 335px;
         bottom: 13px;
+        width: 65px;
+        height: 47px;
     }
     .business .slider div {
         height: 310px;
@@ -878,8 +885,8 @@ footer .copy {
         margin-right: 15px;
     }
     footer ul li:first-child {
-        margin: 0;
         width: 100%;
+        margin: 0;
     }
     footer .copy {
         margin-top: 20px;
@@ -895,8 +902,8 @@ footer .copy {
         font-size: 1.5rem;
     }
     .main .txt_area p strong {
-        font-size: 2rem;
         margin: 40px 0 20px;
+        font-size: 2rem;
     }
     .main .txt_area p b {
         font-size: 1.5rem;
@@ -919,8 +926,8 @@ footer .copy {
 
     .main .txt_area {
         top: 50px;
-        margin: 0 10px;
         width: calc(100% - 60px);
+        margin: 0 10px;
     }
     .main .txt_area p strong {
         margin: 20px 0 10px;
@@ -935,21 +942,21 @@ footer .copy {
     .service ul li {
         width: 100%;
         height: auto;
-        padding: 30px 30px 20px;
         margin-bottom: 10px;
+        padding: 30px 30px 20px;
     }
     .service ul li:hover, 
     .service ul li:focus {
         height: auto;
     }
     .service li h4 {
-        padding: 0 0 0 80px;
         position: relative;
+        padding: 0 0 0 80px;
     }
     .service li h4::before {
         position: absolute;
-        left: 0;
         top: 0;
+        left: 0;
     }
 
 
@@ -963,17 +970,17 @@ footer .copy {
         margin-bottom: 30px;
     }
     .business .slider::before {
-        width: 210px;
-        background-position: right bottom;
-        height: 140px;
         right: 60px;
+        width: 210px;
+        height: 140px;
+        background-position: right bottom;
     }
     .business .slider::after {
+        top: auto;
+        right: 250px;
+        bottom: 10px;
         width: 50px;
         height: 38px;
-        top: auto;
-        bottom: 10px;
-        right: 250px;
     }
     .business .slider div {
         height: 300px;
