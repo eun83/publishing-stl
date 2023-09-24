@@ -1,19 +1,26 @@
 $(document).ready(function () {
     
-    // 어설픈 메뉴열기 ㅋㅋ
     $('.nav > .gnb_layout > li').click(function(){
-        $('.nav > .gnb_layout > li').addClass('current');
-        $('.nav > .gnb_layout').addClass('open');
+        var $me = $(this);
+   
+        if($me.is($me.parent().find('.current'))){
+            // 이전 선택한 대상과 같은 경우 닫기
+            $me.removeClass('current');
+            $me.closest('.gnb_layout').removeClass('open');
+        } else {
+            // 이전 선택한 대상과 다른 경우 새로 열기
+            $me.siblings().removeClass('current');
+            $me.addClass('current');
+            $me.closest('.gnb_layout').addClass('open');
+        }
+       
+        return false;
     });
 
-    $('.nav > .gnb_layout > li').click(function(){
+    $('.nav').mouseleave(function(){
         $('.nav > .gnb_layout > li').removeClass('current');
         $('.nav > .gnb_layout').removeClass('open');
     });
-    // 위에꺼 고쳐주세요 ㅠㅠ 스크립트 안넣으니 태블릿에서 메뉴가 안열림
-
-
-
 
     $('.btn_all_menu_open').click(function(){
         $('.all_menu').addClass('active');
@@ -37,14 +44,13 @@ $(document).ready(function () {
         $('.search_wrap').hide().removeClass('active').show();
     });
     
-    $('.all_menu > .gnb_layout > li').click(function (e) {
-        let idx = $(this).index();
-        if($('.all_menu > .gnb_layout > li').eq(idx).hasClass('current') == false &&
-        idx !== $('.all_menu > .gnb_layout > li').length - 1){
-            $('.all_menu > .gnb_layout > li').removeClass('current')
-            $('.all_menu > .gnb_layout > li').eq(idx).addClass('current')
+    $('.all_menu > .gnb_layout > li').click(function(){
+        let $me = $(this);
+        if($me.hasClass('current')){
+            $me.removeClass('current')
         }else{
-            $('.all_menu > .gnb_layout > li').eq(idx).removeClass('current')
+            $me.removeClass('current')
+            $me.addClass('current')
         }
     });
 });
