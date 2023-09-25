@@ -1,7 +1,7 @@
 $(document).ready(function () {
     
     $('.nav > .gnb_layout > li').click(function(){
-        var $me = $(this);
+        let $me = $(this);
    
         if($me.is($me.parent().find('.current'))){
             // 이전 선택한 대상과 같은 경우 닫기
@@ -46,11 +46,14 @@ $(document).ready(function () {
     
     $('.all_menu > .gnb_layout > li').click(function(){
         let $me = $(this);
-        if($me.hasClass('current')){
-            $me.removeClass('current')
-        }else{
-            $me.removeClass('current')
-            $me.addClass('current')
+        if($me.is($me.parent().find('.current'))){
+            // 이전 선택한 대상과 같은 경우 닫기
+            $me.removeClass('current');
+        } else {
+            // 이전 선택한 대상과 다른 경우 새로 열기
+            $me.siblings().removeClass('current');
+            $me.addClass('current');
         }
+        return false;
     });
 });
