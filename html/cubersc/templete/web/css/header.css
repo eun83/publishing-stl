@@ -115,14 +115,26 @@ header h1 img {
     padding: 34px 32px;
     transform: translateX(-20%);
 }
-.nav .gnb_layout > li.current > ul,
-.nav .gnb_layout > li:hover > ul,
-.nav .gnb_layout > li:focus > ul { 
-    visibility:visible;
-    opacity:1;
-    -webkit-transition-delay: .2s;
-    -o-transition-delay: .2s;
-    transition-delay: .2s;
+/* PC용 hover */
+@media (hover: hover) and (pointer: fine) {
+    .nav .gnb_layout > li:hover > ul,
+    .nav .gnb_layout > li:focus > ul { 
+        visibility:visible;
+        opacity:1;
+        -webkit-transition-delay: .2s;
+        -o-transition-delay: .2s;
+        transition-delay: .2s;
+    }
+}
+/* 태블릿용 click */
+@media (hover: none) and (pointer: coarse) {
+    .nav .gnb_layout > li.current > ul { 
+        visibility:visible;
+        opacity:1;
+        -webkit-transition-delay: .2s;
+        -o-transition-delay: .2s;
+        transition-delay: .2s;
+    }
 }
 .nav .gnb_layout ul a {
     padding: 10px 15px;

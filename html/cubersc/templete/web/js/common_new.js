@@ -2,7 +2,7 @@ $(document).ready(function () {
     
     $('.nav > .gnb_layout > li').click(function(){
         let $me = $(this);
-   
+
         if($me.is($me.parent().find('.current'))){
             // 이전 선택한 대상과 같은 경우 닫기
             $me.removeClass('current');
@@ -13,7 +13,7 @@ $(document).ready(function () {
             $me.addClass('current');
             $me.closest('.gnb_layout').addClass('open');
         }
-       
+
         return false;
     });
 
