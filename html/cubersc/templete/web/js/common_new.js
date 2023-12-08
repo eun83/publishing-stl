@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('.nav > .gnb_layout').on('mouseover click', function() {
         $('.nav > .gnb_layout').addClass('open');
 
-        return false;
+        // return false;
     });
     $('.nav').mouseleave(function(){
         $('.nav > .gnb_layout').removeClass('open');
@@ -44,6 +44,6 @@ $(document).ready(function () {
             $me.siblings().removeClass('current');
             $me.addClass('current');
         }
-        return false;
+        // return false;
     });
 });
